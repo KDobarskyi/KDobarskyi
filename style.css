@@ -262,7 +262,15 @@ body.light-mode .theme-toggle {
         background: radial-gradient(ellipse at 50% 15%, #28314a 0%, #232b3b 80%, #202636 100%);
     }
     .landing {
-        padding: 0 10px;
+        padding: 0 5vw;
+    }
+    .profile-card {
+        padding: 18vw 3vw 10vw 3vw;
+        max-width: 100%;
+        margin: 7vw auto 7vw auto;
+        border-radius: 28px;
+        box-shadow: 0 4px 32px 0 rgba(20,33,61,0.18);
+        box-sizing: border-box;
     }
     .theme-toggle {
         position: absolute;
@@ -271,13 +279,6 @@ body.light-mode .theme-toggle {
         width: 38px;
         height: 38px;
         font-size: 1.1rem;
-    }
-    .profile-card {
-        padding: 18vw 3vw 10vw 3vw;
-        max-width: 98vw;
-        margin: 7vw auto 7vw auto;
-        border-radius: 28px;
-        box-shadow: 0 4px 32px 0 rgba(20,33,61,0.18);
     }
     .profile-photo-outer {
         margin-bottom: 6vw;
