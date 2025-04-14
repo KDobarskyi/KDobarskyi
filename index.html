@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Fira+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
     <button class="theme-toggle" aria-label="Toggle dark or light mode"></button>
     <main class="landing" id="main-content" tabindex="-1">
         <section class="profile-card" role="region" aria-labelledby="main-heading">
@@ -46,11 +45,6 @@
     setTheme(getTheme() === 'dark');
     themeToggle.onclick = () => setTheme(document.body.classList.contains('light-mode'));
     themeToggle.innerHTML = '<span aria-hidden="true">🌓</span>';
-    // Skip link focus
-    const skip = document.querySelector('.skip-link');
-    skip.addEventListener('click', e => {
-      document.getElementById('main-content').focus();
-    });
     </script>
 </body>
 </html>
