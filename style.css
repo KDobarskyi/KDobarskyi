@@ -179,52 +179,32 @@ h2 {
     margin-top: 2px;
 }
 
-.contact-link {
+.contact-link,
+.contact-link:visited {
     color: #e0e7ef;
     background: none;
-    border-radius: 0;
-    border-bottom: 1.5px solid transparent;
-    padding: 0;
-    margin: 0 4px;
-    text-shadow: none;
-    font-weight: 400;
-    letter-spacing: 0.14em;
-    box-shadow: none;
+    border: none;
+    outline: none;
+    transition: color 0.18s, background 0.18s, box-shadow 0.18s;
     text-decoration: none;
-    transition: border-bottom 0.22s, color 0.22s, opacity 0.18s, box-shadow 0.18s, background 0.18s, color 0.18s, outline 0.18s, opacity 0.18s, transform 0.13s;
-    display: inline-block;
-    font-size: 1.05rem;
-    opacity: 0.84;
-    position: relative;
 }
 
-.contact-link::after {
-    content: '';
-    display: block;
-    width: 0%;
-    height: 2px;
+.contact-link:hover,
+.contact-link:focus {
+    color: #ffe066;
+    background: rgba(255, 224, 102, 0.08);
+    text-decoration: underline;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact-link:active {
+    color: #232b3b;
     background: #ffe066;
-    transition: width 0.22s cubic-bezier(.4,0,.2,1);
-    margin: 0 auto;
-}
-
-.contact-link:hover {
-    color: #ffe066;
-    border-bottom: 1.5px solid #ffe066;
-    opacity: 1;
-}
-
-.contact-link:hover::after {
-    width: 100%;
-}
-
-.contact-link:active, .contact-link:focus {
-    outline: 2px solid #ffe066;
-    background: #232b3b22;
-    color: #ffe066;
-    opacity: 1;
-    text-decoration: underline solid 2px #ffe066;
-    transform: scale(0.98);
+    text-decoration: underline;
+    border-radius: 8px;
+    box-shadow: 0 0 0 3px #ffe06655;
+    outline: none;
 }
 
 .theme-toggle {
@@ -334,6 +314,33 @@ body.light-mode .theme-toggle {
         margin-top: 2vw;
         width: 100%;
         align-items: center;
+    }
+    .contact-link,
+    .contact-link:visited {
+        color: #e0e7ef;
+        background: none;
+        border: none;
+        outline: none;
+        transition: color 0.18s, background 0.18s, box-shadow 0.18s;
+        text-decoration: none;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus {
+        color: #ffe066;
+        background: rgba(255, 224, 102, 0.08);
+        text-decoration: underline;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    .contact-link:active {
+        color: #232b3b;
+        background: #ffe066;
+        text-decoration: underline;
+        border-radius: 8px;
+        box-shadow: 0 0 0 3px #ffe06655;
+        outline: none;
     }
 }
 
