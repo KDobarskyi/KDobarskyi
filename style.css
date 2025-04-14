@@ -25,29 +25,28 @@ body, .landing {
 }
 
 .landing {
-    position: relative;
-    z-index: 3;
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     justify-content: center;
-    width: 100vw;
     position: relative;
-    padding: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
 }
 
 .profile-card {
-    background: rgba(34, 44, 74, 0.72);
-    border-radius: 38px;
-    box-shadow: 0 12px 48px 0 rgba(20,33,61,0.14), 0 2px 8px rgba(0,0,0,0.05);
-    padding: 90px 60px 64px 60px;
+    background: rgba(34, 44, 74, 0.80);
+    border-radius: 36px;
+    box-shadow: 0 8px 32px rgba(20,33,61,0.13), 0 1.5px 4px rgba(0,0,0,0.03);
+    padding: 64px 36px 48px 36px;
     text-align: center;
-    max-width: 470px;
-    width: auto;
-    margin: 40px auto 40px auto;
-    backdrop-filter: blur(22px) saturate(1.22);
-    border: 1.5px solid rgba(255,255,255,0.11);
+    max-width: 420px;
+    width: 100%;
+    margin: 32px auto;
+    backdrop-filter: blur(18px) saturate(1.12);
+    border: 1.5px solid rgba(255,255,255,0.10);
     position: relative;
     box-sizing: border-box;
 }
@@ -258,70 +257,55 @@ body.light-mode .theme-toggle {
     color: #fbb040;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    *, *:before, *:after {
-        transition: none !important;
-        animation-duration: 0.01ms !important;
-    }
-}
-
-@media (max-width: 600px) {
-    .landing {
-        padding: 0 3vw !important;
-        box-sizing: border-box !important;
-    }
+@media (max-width: 500px) {
     .profile-card {
-        padding: 7vw 3vw 7vw 3vw !important;
-        border-radius: 32px !important;
-        max-width: 420px !important;
-        width: 100% !important;
-        margin: 7vw auto 7vw auto !important;
-        box-shadow: 0 4px 32px 0 rgba(20,33,61,0.18) !important;
-        box-sizing: border-box !important;
+        padding: 36px 8px 32px 8px;
+        border-radius: 22px;
+        max-width: 98vw;
     }
     .profile-photo {
-        width: 22vw !important;
-        height: 22vw !important;
-        min-width: 70px !important;
-        min-height: 70px !important;
-        max-width: 110px !important;
-        max-height: 110px !important;
+        width: 84px;
+        height: 84px;
+        min-width: 64px;
+        min-height: 64px;
+        max-width: 96px;
+        max-height: 96px;
     }
     h1 {
-        font-size: 1.21rem !important;
-        margin-bottom: 3vw !important;
-        white-space: normal !important;
+        font-size: 1.08rem;
+        margin-bottom: 2vw;
+        white-space: normal;
     }
     h2 {
-        font-size: 1.03rem !important;
-        margin-bottom: 6vw !important;
+        font-size: 0.92rem;
+        margin-bottom: 5vw;
     }
     .about {
-        font-size: 1.03rem !important;
-        margin-bottom: 8vw !important;
+        font-size: 0.97rem;
+        margin-bottom: 7vw;
+    }
+    .about-secondary {
+        font-size: 0.96rem;
+        margin-top: 2vw;
     }
     .email-link {
-        margin: 3vw 0 4vw 0 !important;
-        font-size: 1.09rem !important;
+        font-size: 1.03rem;
+        margin: 3vw 0 4vw 0;
+        word-break: break-all;
     }
     .contact-links {
-        gap: 5vw !important;
-        margin-top: 3vw !important;
-        align-items: center !important;
+        flex-direction: column;
+        gap: 4vw;
+        margin-top: 2vw;
+        width: 100%;
+        align-items: center;
     }
     .contact-link {
-        font-size: 1.13rem !important;
-        padding: 2.5vw 0 !important;
-        display: inline-block !important;
-        width: auto !important;
-        text-align: center !important;
-        border-bottom: 1.5px solid transparent !important;
-        text-decoration: underline dotted 1.5px #ffe06666 !important;
-        position: relative !important;
-        box-shadow: none !important;
-    }
-    .contact-link::after {
-        display: none !important;
+        font-size: 1.07rem;
+        padding: 2vw 0;
+        width: 100%;
+        text-align: center;
+        display: block;
     }
     .theme-toggle {
         position: absolute;
@@ -350,5 +334,12 @@ body.light-mode .theme-toggle {
         margin-top: 2vw;
         width: 100%;
         align-items: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *:before, *:after {
+        transition: none !important;
+        animation-duration: 0.01ms !important;
     }
 }
