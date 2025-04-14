@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kostiantyn Dobarskyi – Cloud & AI Architect</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Favicon: gold K on deep blue background -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- SVG Favicon: gold K on deep blue background -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23232b3b'/%3E%3Ctext x='50%' y='54%' text-anchor='middle' font-family='Montserrat,Arial,sans-serif' font-size='36' fill='%23ffe066' dy='.3em'%3EK%3C/text%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Fira+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="theme-toggle" aria-label="Toggle dark or light mode"></button>
     <main class="landing" id="main-content" tabindex="-1">
         <section class="profile-card" role="region" aria-labelledby="main-heading">
             <div class="profile-photo-outer" tabindex="0" aria-label="Profile photo of Kostiantyn Dobarskyi">
@@ -31,21 +30,5 @@
             </nav>
         </section>
     </main>
-    <script>
-    // Theme toggle with system preference
-    const themeToggle = document.querySelector('.theme-toggle');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    function setTheme(dark) {
-      document.body.classList.toggle('light-mode', !dark);
-      document.body.classList.toggle('dark-mode', dark);
-      localStorage.setItem('theme', dark ? 'dark' : 'light');
-    }
-    function getTheme() {
-      return localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
-    }
-    setTheme(getTheme() === 'dark');
-    themeToggle.onclick = () => setTheme(document.body.classList.contains('light-mode'));
-    themeToggle.innerHTML = '<span aria-hidden="true">🌓</span>';
-    </script>
 </body>
 </html>
