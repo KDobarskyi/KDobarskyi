@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code for dobarskyi.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: radial-gradient(ellipse at 50% 30%, #28314a 0%, #232b3b 70%, #202636 100%);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #ffe066;
+        }
+        .qr-container {
+            background: rgba(34, 44, 74, 0.85);
+            border-radius: 32px;
+            box-shadow: 0 8px 32px rgba(20,33,61,0.13);
+            padding: 40px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            color: #ffe066;
+            letter-spacing: 1px;
+        }
+        .qr {
+            background: #fff;
+            padding: 16px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px #1b223544;
+            margin-bottom: 24px;
+        }
+        .url {
+            color: #e0e7ef;
+            font-size: 1.08rem;
+            word-break: break-all;
+        }
+        @media (max-width: 600px) {
+            .qr-container {
+                padding: 24px 6vw;
+            }
+            .qr {
+                padding: 7px;
+            }
+            h1 {
+                font-size: 1.13rem;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+</head>
+<body>
+    <div class="qr-container">
+        <h1>Scan to visit dobarskyi.com</h1>
+        <canvas id="qr" class="qr" width="220" height="220"></canvas>
+        <div class="url">https://dobarskyi.com</div>
+    </div>
+    <script>
+        var qr = new QRious({
+            element: document.getElementById('qr'),
+            value: 'https://dobarskyi.com',
+            size: 220,
+            background: 'white',
+            foreground: '#232b3b',
+            level: 'H'
+        });
+    </script>
+</body>
+</html>
