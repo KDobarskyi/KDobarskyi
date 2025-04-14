@@ -271,13 +271,57 @@ body.light-mode .theme-toggle {
         box-sizing: border-box;
     }
     .profile-card {
-        padding: 10vw 4vw 8vw 4vw;
+        padding: 7vw 3vw 7vw 3vw;
+        border-radius: 32px;
         max-width: 420px;
         width: 100%;
         margin: 7vw auto 7vw auto;
-        border-radius: 28px;
         box-shadow: 0 4px 32px 0 rgba(20,33,61,0.18);
         box-sizing: border-box;
+    }
+    .profile-photo {
+        width: 22vw;
+        height: 22vw;
+        min-width: 70px;
+        min-height: 70px;
+        max-width: 110px;
+        max-height: 110px;
+    }
+    h1 {
+        font-size: 1.21rem;
+        margin-bottom: 3vw;
+        white-space: normal;
+    }
+    h2 {
+        font-size: 1.03rem;
+        margin-bottom: 6vw;
+    }
+    .about {
+        font-size: 1.03rem;
+        margin-bottom: 8vw;
+    }
+    .email-link {
+        margin: 3vw 0 4vw 0;
+        font-size: 1.09rem;
+    }
+    .contact-links {
+        gap: 5vw;
+        margin-top: 3vw;
+        align-items: center;
+    }
+    .contact-link {
+        font-size: 1.13rem;
+        padding: 2.5vw 0;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        border-bottom: 1.5px solid transparent;
+        text-decoration: underline dotted 1.5px #ffe06666;
+        position: relative;
+        box-shadow: none;
+    }
+    .contact-link::after {
+        display: none;
     }
     .theme-toggle {
         position: absolute;
@@ -291,28 +335,6 @@ body.light-mode .theme-toggle {
         margin-bottom: 6vw;
         padding: 1.5vw;
     }
-    .profile-photo {
-        width: 19vw;
-        height: 19vw;
-        min-width: 58px;
-        min-height: 58px;
-        max-width: 92px;
-        max-height: 92px;
-    }
-    h1 {
-        font-size: 1.14rem;
-        margin-bottom: 2vw;
-        white-space: normal;
-    }
-    h2 {
-        font-size: 0.97rem;
-        margin-bottom: 6vw;
-    }
-    .about {
-        font-size: 0.97rem;
-        margin-bottom: 7vw;
-        line-height: 1.8;
-    }
     .about-secondary {
         display: block;
         white-space: normal;
@@ -322,31 +344,12 @@ body.light-mode .theme-toggle {
         margin-top: 7vw;
         gap: 4vw;
     }
-    .email-link {
-        font-size: 1.03rem;
-        padding: 1vw 0;
-        word-break: break-all;
-    }
     .contact-links {
         flex-direction: column;
         gap: 3vw;
         margin-top: 2vw;
         width: 100%;
         align-items: center;
-    }
-    .contact-link {
-        display: inline-block;
-        font-size: 1.07rem;
-        padding: 2vw 0;
-        width: auto;
-        text-align: center;
-        border-bottom: 1.5px solid transparent;
-        text-decoration: underline dotted 1.5px #ffe06666;
-        position: relative;
-        box-shadow: none;
-    }
-    .contact-link::after {
-        display: none;
     }
 }
 
