@@ -258,70 +258,70 @@ body.light-mode .theme-toggle {
     color: #fbb040;
 }
 
-@media (max-width: 600px) {
-    body {
-        padding: 0;
-        min-height: 100vh;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background: radial-gradient(ellipse at 50% 15%, #28314a 0%, #232b3b 80%, #202636 100%);
+@media (prefers-reduced-motion: reduce) {
+    *, *:before, *:after {
+        transition: none !important;
+        animation-duration: 0.01ms !important;
     }
+}
+
+@media (max-width: 600px) {
     .landing {
-        padding: 0 7vw;
-        box-sizing: border-box;
+        padding: 0 3vw !important;
+        box-sizing: border-box !important;
     }
     .profile-card {
-        padding: 7vw 3vw 7vw 3vw;
-        border-radius: 32px;
-        max-width: 420px;
-        width: 100%;
-        margin: 7vw auto 7vw auto;
-        box-shadow: 0 4px 32px 0 rgba(20,33,61,0.18);
-        box-sizing: border-box;
+        padding: 7vw 3vw 7vw 3vw !important;
+        border-radius: 32px !important;
+        max-width: 420px !important;
+        width: 100% !important;
+        margin: 7vw auto 7vw auto !important;
+        box-shadow: 0 4px 32px 0 rgba(20,33,61,0.18) !important;
+        box-sizing: border-box !important;
     }
     .profile-photo {
-        width: 22vw;
-        height: 22vw;
-        min-width: 70px;
-        min-height: 70px;
-        max-width: 110px;
-        max-height: 110px;
+        width: 22vw !important;
+        height: 22vw !important;
+        min-width: 70px !important;
+        min-height: 70px !important;
+        max-width: 110px !important;
+        max-height: 110px !important;
     }
     h1 {
-        font-size: 1.21rem;
-        margin-bottom: 3vw;
-        white-space: normal;
+        font-size: 1.21rem !important;
+        margin-bottom: 3vw !important;
+        white-space: normal !important;
     }
     h2 {
-        font-size: 1.03rem;
-        margin-bottom: 6vw;
+        font-size: 1.03rem !important;
+        margin-bottom: 6vw !important;
     }
     .about {
-        font-size: 1.03rem;
-        margin-bottom: 8vw;
+        font-size: 1.03rem !important;
+        margin-bottom: 8vw !important;
     }
     .email-link {
-        margin: 3vw 0 4vw 0;
-        font-size: 1.09rem;
+        margin: 3vw 0 4vw 0 !important;
+        font-size: 1.09rem !important;
     }
     .contact-links {
-        gap: 5vw;
-        margin-top: 3vw;
-        align-items: center;
+        gap: 5vw !important;
+        margin-top: 3vw !important;
+        align-items: center !important;
     }
     .contact-link {
-        font-size: 1.13rem;
-        padding: 2.5vw 0;
-        display: inline-block;
-        width: auto;
-        text-align: center;
-        border-bottom: 1.5px solid transparent;
-        text-decoration: underline dotted 1.5px #ffe06666;
-        position: relative;
-        box-shadow: none;
+        font-size: 1.13rem !important;
+        padding: 2.5vw 0 !important;
+        display: inline-block !important;
+        width: auto !important;
+        text-align: center !important;
+        border-bottom: 1.5px solid transparent !important;
+        text-decoration: underline dotted 1.5px #ffe06666 !important;
+        position: relative !important;
+        box-shadow: none !important;
     }
     .contact-link::after {
-        display: none;
+        display: none !important;
     }
     .theme-toggle {
         position: absolute;
@@ -350,12 +350,5 @@ body.light-mode .theme-toggle {
         margin-top: 2vw;
         width: 100%;
         align-items: center;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *, *:before, *:after {
-        transition: none !important;
-        animation-duration: 0.01ms !important;
     }
 }
